@@ -1,0 +1,149 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+main {
+  display: flex;
+  /* border: solid; */
+  height: 100vh;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  /* border: solid red; */
+}
+/* ส่วนการ์ด */
+.card-section {
+  width: 30%;
+  height: 100%;
+  position: relative;
+  background-image: url("./assets/bg-main-desktop.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 90%;
+  transform: translate(45%, 20%);
+}
+.front-card,
+.back-card {
+  position: relative;
+}
+.front-card-img,
+.back-card-img {
+  width: 100%;
+}
+.front-logo-img,
+.front-card-number,
+.front-card-name,
+.front-card-exp,
+.back-card-cvc {
+  position: absolute;
+}
+.front-logo-img {
+  top: 20px;
+  left: 20px;
+}
+.front-card-number {
+  bottom: 70px;
+  left: 25px;
+  font-size: 28px;
+  color: white;
+}
+.front-card-name {
+  bottom: 30px;
+  left: 25px;
+  color: white;
+}
+.front-card-exp {
+  bottom: 30px;
+  right: 30px;
+  color: white;
+}
+.back-card {
+  left: 100px;
+}
+.back-card-cvc {
+  color: white;
+  top: 98px;
+  right: 50px;
+}
+/* ส่วนกรอกข้อมูล */
+.card-detail-section {
+  /* border: solid orange; */
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.card-detail {
+  /* border: solid blue; */
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+input {
+  border: 1px solid hsl(279, 6%, 55%, 0.5);
+}
+#input-cardholder-name,
+#input-card-number {
+  width: 100%;
+  border-radius: 8px;
+  padding: 10px;
+}
+.for-input-exp-cvc {
+  /* border: solid; */
+  display: flex;
+  width: 100%;
+  /* gap: 10px; */
+}
+.for-card-date {
+  width: 60%;
+  /* border: solid coral; */
+}
+.for-card-cvc {
+  width: 40%;
+  /* border: solid teal; */
+}
+.two-input {
+  display: flex;
+}
+#input-card-month,
+#input-card-year {
+  border-radius: 8px;
+  padding: 10px;
+  width: 90%;
+}
+#input-card-cvc {
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+}
+#input-cardholder-name,
+#input-card-number,
+#input-card-month,
+#input-card-year,
+#input-card-cvc {
+  margin-top: 10px;
+}
+.for-submit {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #220930;
+  color: white;
+  font-size: 15px;
+}
