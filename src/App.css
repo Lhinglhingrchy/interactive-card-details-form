@@ -9,6 +9,9 @@ main {
   display: flex;
   /* border: solid; */
   height: 100vh;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .container {
   display: flex;
@@ -17,7 +20,7 @@ main {
   flex-wrap: wrap;
   /* border: solid red; */
 }
-/* ส่วนการ์ด */
+/* card */
 .card-section {
   width: 30%;
   height: 100%;
@@ -78,7 +81,7 @@ main {
   top: 98px;
   right: 50px;
 }
-/* ส่วนกรอกข้อมูล */
+/* input */
 .card-detail-section {
   /* border: solid orange; */
   width: 70%;
@@ -93,6 +96,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding: 30px 0px;
 }
 
 input {
@@ -146,4 +150,40 @@ input {
   background-color: #220930;
   color: white;
   font-size: 15px;
+  cursor: pointer;
 }
+/* Complete */
+.thank-you {
+  /* border: solid blue; */
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 72px 0px;
+}
+.thank-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.thank-text-1 {
+  font-size: 25px;
+}
+.thank-text-2 {
+  color: #908c93;
+}
+.for-continue {
+  width: 80%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #220930;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+/* @media only screen and (min-width: 375px) and (max-width: 600px) {
+} */
