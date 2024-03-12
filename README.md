@@ -1,8 +1,13 @@
-# React + Vite
+# Interactive card details form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A project involves creating an interactive card form input. Users can fill in the form and see the card details update in real time.
 
-Currently, two official plugins are available:
+![design](./src/asset/desktop-design.jpg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Credit
+
+This is a solution to the [Interactive card details form challenge on Frontend Mentor].
+
+```bash
+https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw
+```

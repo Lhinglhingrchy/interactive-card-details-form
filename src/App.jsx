@@ -12,9 +12,56 @@ function App() {
   const [expMonth, setExpMonth] = useState("");
   const [expYear, setExpYear] = useState("");
   const [cvc, setCvc] = useState("");
+  const [errorName, setErrorName] = useState("");
+  const [errorCardNumber, setErrorCardNumber] = useState("");
+  const [errorExpMonth, setErrorExpMonth] = useState("");
+  const [errorExpYear, setErrorExpYear] = useState("");
+  const [errorCvc, setErrorCvc] = useState("");
 
-  const handleSubmit = () => {
-    setConfirmed(true);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (cardName === "") {
+      setErrorName("Please enter your card name");
+    } else {
+      setErrorName("");
+    }
+
+    if (cardNumber === "") {
+      setErrorCardNumber("Please enter your card number");
+    } else if (cardNumber.replace(/\D/g, "").length !== 16) {
+      setErrorCardNumber("Please enter a valid 16-digit card number");
+      return;
+    } else {
+      setErrorCardNumber("");
+    }
+
+    if (expMonth === "") {
+      setErrorExpMonth("Can't be blank");
+    } else {
+      setErrorExpMonth("");
+    }
+
+    if (expYear === "") {
+      setErrorExpYear("Can't be blank");
+    } else {
+      setErrorExpYear("");
+    }
+
+    if (cvc === "") {
+      setErrorCvc("Can't be blank");
+    } else {
+      setErrorCvc("");
+    }
+
+    if (
+      cardName.trim() !== "" &&
+      cardNumber.replace(/\D/g, "").length === 16 &&
+      expMonth.trim() !== "" &&
+      expYear.trim() !== "" &&
+      cvc.trim() !== ""
+    ) {
+      setConfirmed(true);
+    }
   };
 
   return (
@@ -71,8 +118,13 @@ function App() {
                     onChange={(event) => {
                       setCardName(event.target.value);
                     }}
-                    required
+                    style={{
+                      border: errorName
+                        ? "2px solid red"
+                        : "1px solid hsl(279, 6%, 55%, 0.5)",
+                    }}
                   />
+                  {errorName && <p className="error-message">{errorName}</p>}
                 </div>
 
                 <div className="for-input-number">
@@ -90,8 +142,15 @@ function App() {
                     onChange={(event) => {
                       setCardNumber(event.target.value);
                     }}
-                    required
+                    style={{
+                      border: errorCardNumber
+                        ? "2px solid red"
+                        : "1px solid hsl(279, 6%, 55%, 0.5)",
+                    }}
                   />
+                  {errorCardNumber && (
+                    <p className="error-message">{errorCardNumber}</p>
+                  )}
                 </div>
 
                 <div className="for-input-exp-cvc">
@@ -108,21 +167,35 @@ function App() {
                           onChange={(event) => {
                             setExpMonth(event.target.value);
                           }}
-                          required
+                          style={{
+                            border: errorExpMonth
+                              ? "2px solid red"
+                              : "1px solid hsl(279, 6%, 55%, 0.5)",
+                          }}
                         />
+                        {errorExpMonth && (
+                          <p className="error-message">{errorExpMonth}</p>
+                        )}
                       </div>
                       <div>
                         <input
                           id="input-card-year"
                           type="text"
                           placeholder="YY"
-                          required
                           maxLength={2}
                           value={expYear.replace(/\D/g, "")}
                           onChange={(event) => {
                             setExpYear(event.target.value);
                           }}
+                          style={{
+                            border: errorExpYear
+                              ? "2px solid red"
+                              : "1px solid hsl(279, 6%, 55%, 0.5)",
+                          }}
                         />
+                        {errorExpYear && (
+                          <p className="error-message">{errorExpYear}</p>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -138,8 +211,13 @@ function App() {
                       onChange={(event) => {
                         setCvc(event.target.value);
                       }}
-                      required
+                      style={{
+                        border: errorCvc
+                          ? "2px solid red"
+                          : "1px solid hsl(279, 6%, 55%, 0.5)",
+                      }}
                     />
+                    {errorCvc && <p className="error-message">{errorCvc}</p>}
                   </div>
                 </div>
                 <button className="for-submit" type="submit">

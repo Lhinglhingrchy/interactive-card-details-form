@@ -152,6 +152,11 @@ input {
   font-size: 15px;
   cursor: pointer;
 }
+.error-message {
+  color: red;
+  font-size: 15px;
+  padding-top: 5px;
+}
 /* Complete */
 .thank-you {
   /* border: solid blue; */
