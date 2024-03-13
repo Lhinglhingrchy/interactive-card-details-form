@@ -2,7 +2,12 @@
 
 A project involves creating an interactive card form input. Users can fill in the form and see the card details update in real time.
 
-![design](./src/asset/desktop-design.jpg)
+![design](./src/assets/desktop-design.jpg)
+
+## Responsive Design
+
+- Mobile (375px)
+- Desktop (1440px)
 
 ## Credit
 

@@ -29,6 +29,7 @@ main {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  /* border: solid green; */
 }
 .card {
   position: absolute;
@@ -190,5 +191,97 @@ input {
   font-size: 15px;
   cursor: pointer;
 }
-/* @media only screen and (min-width: 375px) and (max-width: 600px) {
-} */
+@media only screen and (min-width: 375px) and (max-width: 600px) {
+  main {
+    height: 100%;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 70px;
+  }
+  /* card */
+  .card-section {
+    width: 100%;
+    height: 230px;
+    position: relative;
+    background-image: url("./assets/bg-main-mobile.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .card {
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0px;
+    width: 80%;
+    transform: translate(20px, 25px);
+  }
+  .back-card {
+    left: 0px;
+  }
+  .back-card-cvc {
+    font-size: 13px;
+    top: 72px;
+    right: 40px;
+  }
+  .front-card {
+    z-index: 2;
+    top: -70px;
+    right: 40px;
+  }
+  .front-logo-img {
+    width: 50px;
+    left: 20px;
+  }
+  .front-card-number {
+    font-size: 20px;
+    bottom: 60px;
+    left: 20px;
+  }
+  .front-card-name {
+    bottom: 30px;
+    left: 20px;
+    font-size: 15px;
+  }
+  .front-card-exp {
+    bottom: 30px;
+    right: 30px;
+    font-size: 15px;
+  }
+
+  /* input */
+  .card-detail-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-detail {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 0px;
+  }
+  .error-message {
+    font-size: 12px;
+    padding-top: 0px;
+  }
+  .thank-you {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 58px 0px;
+  }
+}
