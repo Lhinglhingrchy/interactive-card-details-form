@@ -103,6 +103,13 @@ main {
 input {
   border: 1px solid hsl(279, 6%, 55%, 0.5);
 }
+/* input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+} */
 #input-cardholder-name,
 #input-card-number {
   width: 100%;

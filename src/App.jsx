@@ -135,12 +135,13 @@ function App() {
                     type="text"
                     placeholder="e.g. 1234 5678 9123 0000"
                     maxLength={19}
-                    value={cardNumber
-                      .replace(/\D/g, "")
-                      .replace(/(\d{4})/g, "$1 ")
-                      .trim()}
+                    value={cardNumber}
                     onChange={(event) => {
-                      setCardNumber(event.target.value);
+                      const value = event.target.value
+                        .replace(/\D/g, "")
+                        .replace(/(\d{4})/g, "$1 ")
+                        .trim();
+                      setCardNumber(value);
                     }}
                     style={{
                       border: errorCardNumber
@@ -163,9 +164,9 @@ function App() {
                           type="text"
                           placeholder="MM"
                           maxLength={2}
-                          value={expMonth.replace(/\D/g, "")}
+                          value={expMonth}
                           onChange={(event) => {
-                            setExpMonth(event.target.value);
+                            setExpMonth(event.target.value.replace(/\D/g, ""));
                           }}
                           style={{
                             border: errorExpMonth
@@ -183,9 +184,9 @@ function App() {
                           type="text"
                           placeholder="YY"
                           maxLength={2}
-                          value={expYear.replace(/\D/g, "")}
+                          value={expYear}
                           onChange={(event) => {
-                            setExpYear(event.target.value);
+                            setExpYear(event.target.value.replace(/\D/g, ""));
                           }}
                           style={{
                             border: errorExpYear
@@ -207,9 +208,9 @@ function App() {
                       type="text"
                       placeholder="e.g. 123"
                       maxLength={3}
-                      value={cvc.replace(/\D/g, "")}
+                      value={cvc}
                       onChange={(event) => {
-                        setCvc(event.target.value);
+                        setCvc(event.target.value.replace(/\D/g, ""));
                       }}
                       style={{
                         border: errorCvc
